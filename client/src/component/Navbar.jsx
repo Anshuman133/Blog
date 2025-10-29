@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import hamburgerIcon from '../assets/more.png';
 import closeIcon from '../assets/close.png';
 
@@ -16,7 +16,9 @@ export const Navbar = () => {
     <div className='mb-8 mx-5 md:mx-26 mt-10'>
       {/* Header */}
       <div className='flex justify-between items-center relative z-50'>
-        <span className='text-xl font-semibold'>Your Name</span>
+        <Link
+         to = '/'
+         className='text-xl font-semibold'> Your Name</Link>
         
         {/* Desktop Navigation - Hidden on mobile */}
         <nav className='hidden md:flex space-x-5 text-xl'>

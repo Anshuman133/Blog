@@ -8,6 +8,7 @@ import { About } from './pages/About.jsx'
 import { Projects } from './pages/Projects.jsx'
 import { Newsletter } from './pages/Newsletter.jsx'
 import { Admin } from './pages/Admin.jsx'
+import { BlogDetails } from './pages/BlogDetails.jsx'
 
 const router  = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router  = createBrowserRouter([
       {path: 'about', element: <About/>},
       {path: 'projects', element: <Projects/>},
       {path: 'newsletter', element: <Newsletter/>},
-      
+      {path: 'blog/:blogId', element: <BlogDetails/>}
 
     ]
   },

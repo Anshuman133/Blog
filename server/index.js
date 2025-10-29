@@ -23,6 +23,22 @@ app.get('/', async(req, res) =>{
     }
 });
 
+app.get('/blog/:blogId', async(req, res) => {
+    try {
+        const { blogId } = req.params;
+        const blog = await Blog.findById(blogId);
+
+        if (!blog) {
+            return res.status(404).json({ message: 'Blog not found' });
+        }
+
+        res.json(blog);
+    } catch (error) {
+        console.log('Error fetching blog:', error.message);
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+}); 
+
 app.post('/me/admin',upload.single('image'), async (req, res) =>{
     try{
         const {title, description, author, category} = req.body;
