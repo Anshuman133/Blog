@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 
 export  function Admin() {
   const [formData, setFormData] = useState({
@@ -57,7 +58,7 @@ export  function Admin() {
         setFormData({
           title: '',
           author: '',
-          category: '',
+          category: '', 
           description: '',
           image: null
         });
@@ -78,6 +79,10 @@ export  function Admin() {
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-gray-800 mb-2">Create New Blog Post</h1>
           <p className="text-gray-600">Share your thoughts with the world</p>
+            <Link
+            to = '/me/admin/edit'
+            className='px-3 rounded-lg text-white bg-blue-500'
+            >All Blogs</Link>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl p-8">

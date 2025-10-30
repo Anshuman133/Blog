@@ -9,6 +9,7 @@ import { Projects } from './pages/Projects.jsx'
 import { Newsletter } from './pages/Newsletter.jsx'
 import { Admin } from './pages/Admin.jsx'
 import { BlogDetails } from './pages/BlogDetails.jsx'
+import AdminEdit from './pages/AdminEdit.jsx'
 
 const router  = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router  = createBrowserRouter([
     ]
   },
   {path: 'me/admin', element: <Admin/>},
+  {path: "me/admin/edit", element: <AdminEdit/>}
 
 ]);
 
